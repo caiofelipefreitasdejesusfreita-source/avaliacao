@@ -30,8 +30,31 @@ Class Carro {
         echo "O carro freou. Velocidade: "
         . $this->velocidade . "km/h <br>";
     }
-    
-}
+
+    //dentro da cllasse
+        public function marca(){
+            $this -> marca = "Uno";
+            echo "A marca do carro é: " . $this->marca . "<br>";
+        }
+
+        public function modelo(){
+            $this -> modelo = 'Com escada';
+            echo "O modelo do seu carro é: ". $this -> modelo . "<br>";
+        }
+
+        public function ano(){
+            $this -> ano = '1988';
+            echo "O ano do seu carro é: ". $this -> ano . "<br>";
+        }
+
+        public function cor(){
+            $this -> cor = 'verde';
+            echo "A cor do seu carro é: ". $this -> cor . "<br>";
+        }
+    }
+
+    //fora da classe
+
     // objeto
     $meuCarro = new Carro();
 
@@ -39,6 +62,11 @@ Class Carro {
     $meuCarro->acelerar();
     $meuCarro->acelerar();
     $meuCarro->frear();
+
+    $meuCarro->marca();
+    $meuCarro->modelo();
+    $meuCarro->ano();
+    $meuCarro->cor();
 
     ?>
 </body>
